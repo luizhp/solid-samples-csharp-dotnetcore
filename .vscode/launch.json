@@ -16,13 +16,24 @@
             "stopAtEntry": false
         },
         {
-            "name": "Launch SOLID02OpenClosedPrinciple",
+            "name": "Launch SOLID02OpenClosedPrinciple - Abstract Class",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/SOLID02OpenClosedPrinciple/bin/Debug/netcoreapp3.1/SOLID02OpenClosedPrinciple.dll",
+            "program": "${workspaceFolder}/SOLID02OpenClosedPrinciple/01-abstract-class/bin/Debug/netcoreapp3.1/SOLID02OpenClosedPrinciple-ac.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/SOLID02OpenClosedPrinciple",
+            "cwd": "${workspaceFolder}/SOLID02OpenClosedPrinciple/01-abstract-class",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch SOLID02OpenClosedPrinciple - Extension Method",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/SOLID02OpenClosedPrinciple/02-extension-method/bin/Debug/netcoreapp3.1/SOLID02OpenClosedPrinciple-em.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/SOLID02OpenClosedPrinciple/02-extension-method",
             "console": "internalConsole",
             "stopAtEntry": false
         },

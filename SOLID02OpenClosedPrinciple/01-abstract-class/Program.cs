@@ -1,15 +1,14 @@
 ﻿using System;
 
-namespace SOLID02OpenClosedPrinciple
+namespace SOLID02OpenClosedPrinciple.AbstractClass
 {
-
-  public class CreditCard
+  public abstract class CreditCard
   {
-    private string _code;
-    private DateTime _expiration;
+    private readonly string _code;
+    private readonly DateTime _expiration;
     protected Double _monthlyCost;
 
-    public CreditCard(string code, DateTime expiration, Double monthlyCost)
+    internal CreditCard(string code, DateTime expiration, Double monthlyCost)
     {
       this._code = code;
       this._expiration = expiration;
@@ -30,12 +29,10 @@ namespace SOLID02OpenClosedPrinciple
     {
       return this._monthlyCost * 0.02;
     }
-
   }
 
   public class GoldCreditCard : CreditCard
   {
-
     public GoldCreditCard(string code, DateTime expiration, Double monthlyCost) : base(code, expiration, monthlyCost)
     {
     }
@@ -46,9 +43,8 @@ namespace SOLID02OpenClosedPrinciple
     }
   }
 
-  class SilverCreditCard : CreditCard
+  internal class SilverCreditCard : CreditCard
   {
-
     public SilverCreditCard(string code, DateTime expiration, Double monthlyCost) : base(code, expiration, monthlyCost)
     {
     }
@@ -58,13 +54,10 @@ namespace SOLID02OpenClosedPrinciple
     }
   }
 
-  class Program
+  internal static class Program
   {
-    static void Main(string[] args)
+    private static void Main()
     {
-      CreditCard cc = new CreditCard("123", new DateTime(), 10);
-      Console.WriteLine($"Credit Card - Monthly Discount: {cc.GetMonthlyDiscount()}");
-
       CreditCard ccGold = new GoldCreditCard("123", new DateTime(), 10);
       Console.WriteLine($"Gold Credit Card - Monthly Discount: {ccGold.GetMonthlyDiscount()}");
 
